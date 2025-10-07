@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Squash Journey - Muhammad Zohair Kanani</title>
+    <title>My Cooking Journey - Muhammad Zohair Kanani</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -97,11 +97,11 @@
             margin-bottom: 20px;
         }
 
-        .team-image {
+        .cooking-image {
             text-align: center;
         }
 
-        .team-image img {
+        .cooking-image img {
             width: 100%;
             max-width: 500px;
             height: auto;
@@ -110,7 +110,7 @@
             transition: transform 0.3s ease;
         }
 
-        .team-image img:hover {
+        .cooking-image img:hover {
             transform: scale(1.02);
         }
 
@@ -121,119 +121,44 @@
             font-style: italic;
         }
 
-        .achievements-section {
-            margin-top: 50px;
-            padding: 40px;
-            background: linear-gradient(135deg, #1a1a1a 0%, #8B0000 100%);
-            border-radius: 20px;
-            color: white;
-            text-align: center;
-        }
-
-        .achievements-title {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-
-        .achievements-grid {
+        .cooking-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
         }
 
-        .achievement-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .achievement-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .achievement-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .achievement-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .achievement-description {
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-
-        .timeline-section {
-            margin-top: 50px;
-        }
-
-        .timeline-title {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #2d3748;
+        .gallery-item {
             text-align: center;
-            margin-bottom: 40px;
-            position: relative;
         }
 
-        .timeline-title::after {
-            content: '';
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(135deg, #1a1a1a 0%, #8B0000 100%);
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
         }
 
-        .timeline-item {
-            border-left: 4px solid #8B0000;
-            padding-left: 30px;
-            margin-bottom: 40px;
-            position: relative;
+        .gallery-item img:hover {
+            transform: scale(1.05);
         }
 
-        .timeline-item::before {
-            content: '';
-            width: 16px;
-            height: 16px;
-            background: #8B0000;
-            border-radius: 50%;
-            position: absolute;
-            left: -10px;
-            top: 0;
+        .gallery-caption {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #718096;
+            font-style: italic;
         }
 
-        .timeline-date {
-            font-size: 1rem;
-            color: #8B0000;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .timeline-title-text {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 10px;
-        }
-
-        .timeline-description {
-            color: #4a5568;
-            line-height: 1.7;
+        .placeholder-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #718096;
+            text-align: center;
+            padding: 40px;
+            font-style: italic;
         }
 
         @media (max-width: 768px) {
@@ -247,7 +172,7 @@
                 text-align: center;
             }
             
-            .achievements-grid {
+            .cooking-gallery {
                 grid-template-columns: 1fr;
             }
             
@@ -272,33 +197,42 @@
     <div class="container">
         <div class="header">
             <a href="../index.html" class="back-button">← Back to Home</a>
-            <h1 class="page-title">My Squash Journey</h1>
-            <p class="page-subtitle">From Casual Player to University Team Member</p>
+            <h1 class="page-title">My Cooking Journey</h1>
+            <p class="page-subtitle">Creating Culinary Delights</p>
         </div>
 
         <div class="content-section fade-in">
             <div class="story-content">
                 <div class="story-text">
                     <p>
-                        I started playing squash two years ago after coming to HKUST. Initially, I started playing with my friends, but gradually practiced alone, which really boosted my skills and overall game.
+                        Cooking was never something I was passionate about—until I arrived at HKUST. With limited halal food options on campus, I started preparing my own meals out of necessity. Over time, it turned into something I genuinely enjoy.
                     </p>
                     <p>
-                        I also randomly met the university team players practicing and joined with them to practice specific shots and further improve my game. As a result, I was able to get into the university team and I have been a member since last year.
+                        There's something satisfying about choosing your own ingredients and experimenting with different dishes. Since I'm not cooking for a whole family like many mothers do, I'm not too precise with measurements—and yes, I mess up quite a bit. But that's part of the fun.
                     </p>
                     <p>
-                        The picture is from the tournament against the University of Macao, where we lost the overall competition but won the squash matches.
+                        On weekends and holidays, I often cook with friends, and it's become one of my favorite hobbies. It's not just about the food—it's about the shared experience and the laughs along the way.
                     </p>
                 </div>
-                <div class="team-image">
-                    <img src="../images/squashteam.jpg" alt="HKUST Squash Team at University of Macao Tournament" />
-                    <p class="image-caption">HKUST Squash Team at the University of Macao Tournament</p>
+                <div class="cooking-image">
+                    <div class="cooking-gallery">
+                        <div class="gallery-item">
+                            <img src="../images/food1.jpg" alt="Savory stuffed flatbread with meat filling" />
+                            <p class="gallery-caption">Savory stuffed flatbread with meat filling</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../images/food2.jpg" alt="Creamy pasta with meat and vegetables" />
+                            <p class="gallery-caption">Creamy pasta with meat and vegetables</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../images/food3.jpg" alt="Grilled cheese sandwiches with tomatoes" />
+                            <p class="gallery-caption">Grilled cheese sandwiches with tomatoes</p>
+                        </div>
+                    </div>
+                    <p class="image-caption">A glimpse of my cooking</p>
                 </div>
             </div>
         </div>
-
-        
-
-        
     </div>
 
     <script>

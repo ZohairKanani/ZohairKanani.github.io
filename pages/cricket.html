@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cricket Highlights - Muhammad Zohair Kanani</title>
+    <title>My Cricket Journey - Muhammad Zohair Kanani</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -16,7 +17,7 @@
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a1a1a 0%, #8B0000 100%);
             min-height: 100vh;
         }
 
@@ -28,22 +29,25 @@
 
         .header {
             background: rgba(255, 255, 255, 0.95);
-            margin: 30px 0;
+            margin: 30px 0 0 0;
             padding: 50px 40px;
-            border-radius: 20px;
+            border-radius: 20px 20px 0 0;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             text-align: center;
         }
 
         .back-button {
             display: inline-block;
             padding: 12px 24px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a1a1a 0%, #8B0000 100%);
             color: white;
             text-decoration: none;
             border-radius: 25px;
             margin-bottom: 30px;
             transition: all 0.3s ease;
+            font-weight: 500;
         }
 
         .back-button:hover {
@@ -55,14 +59,95 @@
             font-size: 3rem;
             font-weight: 700;
             color: #2d3748;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: #8B0000;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.95);
+            margin: 0 0 30px 0;
+            padding: 50px 40px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .story-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4a5568;
+        }
+
+        .story-text p {
             margin-bottom: 20px;
         }
 
-        .coming-soon {
-            font-size: 1.2rem;
-            color: #718096;
-            padding: 40px;
+        .team-image {
             text-align: center;
+        }
+
+        .team-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .team-image img:hover {
+            transform: scale(1.02);
+        }
+
+        .image-caption {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #718096;
+            font-style: italic;
+        }
+
+
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .story-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+            
+            
+            .header, .content-section {
+                padding: 30px 20px;
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -70,11 +155,49 @@
     <div class="container">
         <div class="header">
             <a href="../index.html" class="back-button">← Back to Home</a>
-            <h1 class="page-title">My Cricket Highlights</h1>
-            <div class="coming-soon">
-                <p>This page is under construction. Content coming soon!</p>
+            <h1 class="page-title">My Cricket Journey</h1>
+            <p class="page-subtitle">From Childhood Passion to University Champion</p>
+        </div>
+
+        <div class="content-section fade-in">
+            <div class="story-content">
+                <div class="story-text">
+                    <p>
+                        Cricket has always held a special place in my life. Growing up in Pakistan, it was the first sport most children learned—and I was no exception. While football is gaining popularity, cricket remains my passion.
+                    </p>
+                    <p>
+                        I've proudly represented my school, college, and now university teams over the years. At HKUST, I've been part of the university cricket team for the past two years.
+                    </p>
+                    <p>
+                        The university not only recognizes and supports cricket but also provides us access to the artificial soccer pitch for regular practice sessions. In the 2023–2024 season, our team clinched the title in the Inter-University League Tournament—a moment of pride and celebration for all of us.
+                    </p>
+                </div>
+                <div class="team-image">
+                    <img src="../images/cricketteam.jpg" alt="HKUST Cricket Team - Inter-University League Champions 2023-2024" />
+                    <p class="image-caption">HKUST Cricket Team - Inter-University League Champions 2023-2024</p>
+                </div>
             </div>
         </div>
+
     </div>
+
+    <script>
+        // Fade in animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        const fadeElements = document.querySelectorAll('.fade-in');
+        fadeElements.forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
